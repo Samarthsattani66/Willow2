@@ -1,556 +1,117 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Watch live sports events on SonyLiv">
-    <title>SonyLIV Live Events</title>
-    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAE2ElEQVR4Ab2WA5BkOxSG01qMbXv67Rhr27Zt27Zt27Zt27btPq/+U5VUz3Y/lGaqvrrp6MvJzT0ZUX/MXV9jngY3QhMrmP4NY2zZ33+SEF3K9H/JGV/9Tr/mB0KEMU/Da0IISg9yxFV7LLB6jcYhXYTxIYVMwjdXt58GbQhBmm5Coc1NkKJywYIFip07d3Fd06ZN6dChw7R06Qp+om7cuHF06tQp8vCwoS5dunDfunXrcvuMGbPIy8sb7ahLKwwpOPeXTl+BIEWU+MNgCDEpOuIPT3NRfFQ03b59G00oq8WVK1eO69asWYuFWEZoU2n9b51Nc4LUoI3h1TVs2JyGDR2OcVipuZDbEUWBbLEoSwHqLPqgbFWY0a4vSSlWiq0DGChXjQmwahkJFoTfsl3uBsBYtCFyC6Fn32s/bXRjSUrl9iJavFeg03iaD+TfWpFRltWBsxOOwLwv9wNK6HvoCwul1NGmEzlnaMxiZ01BxkmbVeEmjP+Iq/BWQCyRwkTHXL9ZGLH2JVmTAk9dRcZXWzQNQSK7FSIVvsInjVgJIZPgfUpxsKYXE5ShFROsraMwioqk0BcyKUQOxpoYUbLQOOGhSQIpnlGND5tCo+coqSRJNLcgh6isyCYKMPEiuwnECKOSIkoI+dBAkNr6CuVp/1RRpeMnpkH5u9TYeJpp4j2fStlPoryip6XUupilANK8hlRiYUL5fQTyFr3IVMl7X9E273Manec9s6bAdzpcguhWme+Kc3nv0Pos52hBwjoaFTCFimsrKiEEIIfuL5ayENEh26SkbCRQIvikREU2KPweMzv4IW0Kfk3n476Zw9IHxW/Qt4b3FLvqrqc2SU0hU9KytrG/BWTRvmMIJDvNZUpl2sSUEXupljhCXTMdp5FOF5QQIKr+vpsRFbM3ZhHzusBBFtK4k8yDeUuoeZ6CaYU4heHOvRlz8YIR6wEmVlKU8S7rO/ZlWjt1pSE2vZhzE8rQ79eCfm7oTN9braBfQ2fTx2VjiY5PppGNS1AdXZBJJGUZ+hPfGY47xAAnEt8jvVlEdLc59S04ExGrA1MqQ3NFfUMDZnLRotwXY95UakSf6vanH126k2lWCwZt6MNCZBB8zBBLOdIcXSxAdDgTVY3uxqv/us4fK8X3h9OIA6J4t7kEyxDRhaiaLAU/e5Ui07TC3H5vWc7fIiG4+0+kJUiBTGdIbbRTw5ROKEWdyxSHDGXVB8cepxHvCIuTUeyOyk1Pi+Zk3rSOou/9YujX9BBesDB6NcGNj2QtgRgJXAmRdJ9M9CbapKee1QJpeK8E2rM4nq8o9L8yzhNt/Ozo4ExLIzxob3wA3SgUxtxv7GWCGHOwEBkf0rTE8CQA1wxPutqZhfVLBxJdcWMgRT1ondefDwakU30dlPhUCWcGYhFuV/YX8hykfyInUsJF3ixE273twXi/2CZsF7c7aTRU0C4DlbXTU0PHzDTIJaMSb0uyMUHKQiEE7jQLpDDJaGsuRBueEPIOoB5R++sFxWUSlMtGo6SIVoohVUJE+SdSmDPZgP2XQtV+Z5kHv2M8hRAQmkl1FlJEKmIcat1EZytABFBGlCjjvzSLPrKMLZVSa5GODvd+KhoFnAiKsat2X95p1u43HH/zsjnmdUhfMoVVdfVjzGXHSrhH/g0qKoAwUKthlgAAAABJRU5ErkJggg==">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2563eb;
-            --secondary: #1e40af;
-            --accent: #ff4500;
-        }
+  <title>Willow HD</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <link rel="shortcut icon" href="https://live.drmlive.in/sports/willow.jpg">
+  <style type="text/css">
+      body, html {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: black;
+      }
+      #player {
+          width: 100vw;
+          height: 80vh;
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+      }
+      #telegram-button {
+          margin-top: 20px;
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: white;
+          font-size: 18px;
+          text-decoration: none;
+          border-radius: 5px;
+      }
+      #telegram-button:hover {
+          background-color: #0056b3;
+      }
+  </style>
+  <script src="https://ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
 
-        body {
-            background: #121212;
-            color: #ffffff;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-        }
+          const m3u8Url = "https://p-cdn4-a-cg14-linear-cbd46b77.movetv.com/clipslist/22/20250216T091024Z/20250216T111024Z/master_7_3_widevine.m3u8";
+          const id = "willow";
+          const encryptedToken = "aDJnb1pCNGtIeGx0elBzUmhpaFNqeDYrc0pyVXJUdlp4WVpwZTladW01azVVNCtENG96bHNiSDVzVkFMVllBYw==";
+          
+          async function fetchClearKey(pssh) {
+              try {
+                  const response = await fetch("key.php", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ pssh: pssh, id: id, token: encryptedToken })
+                  });
 
-        .match-card {
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-                        box-shadow 0.3s ease,
-                        opacity 0.3s ease;
-            background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-        }
+                  if (!response.ok) return null;
+                  return await response.json();
+              } catch (error) {
+                  return null;
+              }
+          }
 
-        .match-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-        }
+          async function initializePlayer() {
+              try {
+                  const pssh = await fetchPSSHFromM3U8(m3u8Url);
+                  const keys = await fetchClearKey(pssh);
 
-        .live-border {
-            border: 3px solid var(--accent);
-        }
+                  jwplayer("player").setup({
+                      playlist: [{
+                          sources: [{
+                              default: true,
+                              type: "dash",
+                              file: m3u8Url,
+                              drm: {
+                                  clearkey: { keyId: keys.keyId, key: keys.key }
+                              },
+                              label: "HD"
+                          }]
+                      }],
+                      width: "100%",
+                      height: "100%",
+                      aspectratio: "16:9",
+                      autostart: true
+                  });
+              } catch (error) {}
+          }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
+          async function fetchPSSHFromM3U8(m3u8Url) {
+              try {
+                  const response = await fetch(m3u8Url);
+                  if (!response.ok) return null;
+                  
+                  const m3u8Text = await response.text();
+                  const sessionKeyTag = m3u8Text.split("\n").find(line => 
+                      line.startsWith("#EXT-X-SESSION-KEY") && 
+                      line.includes('KEYFORMAT="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed"')
+                  );
 
-        .live-pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
+                  if (!sessionKeyTag) return null;
+                  const uriMatch = sessionKeyTag.match(/URI="data:text\/plain;base64,([^"]+)"/);
+                  return uriMatch ? uriMatch[1] : null;
+              } catch (error) {
+                  return null;
+              }
+          }
 
-        .gradient-text {
-            background: linear-gradient(45deg, #ff6b6b, #ff4500);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-    </style>
+          initializePlayer();
+      });
+  </script>
 </head>
-<body class="bg-dark">
-    <!-- Navigation -->
-    <nav class="bg-black/80 backdrop-blur-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <img src="https://images.slivcdn.com/UI_icons/sonyliv_new_revised_header_logo.png" alt="Logo" class="w-8 h-8 rounded">
-                <h1 class="text-xl font-bold gradient-text">SonyLIV Events</h1>
-            </div>
-            <!--<div class="flex items-center space-x-4">-->
-            <!--    <button class="text-gray-300 hover:text-white transition">-->
-            <!--        <i class="fas fa-sync-alt"></i>-->
-            <!--    </button>-->
-            <!--</div>-->
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-8">
-        <!-- Matches Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                                    <article class="match-card rounded-xl overflow-hidden relative transform transition-all ">
-                        <!-- Image -->
-                        <div class="relative aspect-video">
-                            <img 
-                                src="https://origin-staticv2.sonyliv.com/videoasset_images/brest_vs_real_madrid_30th_jan.png" 
-                                alt="Brest vs Real Madrid - UEFA Champions League 2024-25" 
-                                class="w-full h-full object-cover"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <!-- Content -->
-                        <div class="p-4 space-y-3">
-                            <!-- Badges -->
-                            <div class="flex flex-wrap gap-2">
-                                                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    Football                                </span>
-                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    ENG                                </span>
-                            </div>
-
-                            <!-- Details -->
-                            <div class="space-y-2">
-                                <h2 class="text-xl font-bold text-gray-100 truncate">
-                                    Brest vs Real Madrid - UEFA Champions League 2024-25                                </h2>
-                                <p class="text-sm text-gray-400 line-clamp-2">
-                                    Upcoming Match                                </p>
-                                <div class="flex items-center text-sm text-gray-400 space-x-2">
-                                    <i class="fas fa-tv"></i>   
-                                    <span>Sony Sports Ten 5</span>
-                                </div>
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="pt-4">
-                                                                    <div class="relative group">
-                                        <button 
-                                            class="w-full flex items-center justify-center space-x-2 bg-gray-700/50 text-gray-400 px-6 py-3 rounded-lg font-medium cursor-not-allowed overflow-hidden"
-                                            disabled
-                                        >
-                                            <i class="far fa-clock"></i>
-                                            <span>Event Not Started</span>
-                                        </button>
-                                        <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"></div>
-                                    </div>
-                                                            </div>
-                        </div>
-                    </article>
-                                    <article class="match-card rounded-xl overflow-hidden relative transform transition-all ">
-                        <!-- Image -->
-                        <div class="relative aspect-video">
-                            <img 
-                                src="https://origin-staticv2.sonyliv.com/videoasset_images/man_city_vs_club_brugge_30th_jan.png" 
-                                alt="Man City vs Club Brugge - UEFA Champions League 2024-25" 
-                                class="w-full h-full object-cover"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <!-- Content -->
-                        <div class="p-4 space-y-3">
-                            <!-- Badges -->
-                            <div class="flex flex-wrap gap-2">
-                                                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    Football                                </span>
-                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    ENG                                </span>
-                            </div>
-
-                            <!-- Details -->
-                            <div class="space-y-2">
-                                <h2 class="text-xl font-bold text-gray-100 truncate">
-                                    Man City vs Club Brugge - UEFA Champions League 2024-25                                </h2>
-                                <p class="text-sm text-gray-400 line-clamp-2">
-                                    Upcoming Match                                </p>
-                                <div class="flex items-center text-sm text-gray-400 space-x-2">
-                                    <i class="fas fa-tv"></i>   
-                                    <span>Sony Sports Ten 5</span>
-                                </div>
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="pt-4">
-                                                                    <div class="relative group">
-                                        <button 
-                                            class="w-full flex items-center justify-center space-x-2 bg-gray-700/50 text-gray-400 px-6 py-3 rounded-lg font-medium cursor-not-allowed overflow-hidden"
-                                            disabled
-                                        >
-                                            <i class="far fa-clock"></i>
-                                            <span>Event Not Started</span>
-                                        </button>
-                                        <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"></div>
-                                    </div>
-                                                            </div>
-                        </div>
-                    </article>
-                                    <article class="match-card rounded-xl overflow-hidden relative transform transition-all ">
-                        <!-- Image -->
-                        <div class="relative aspect-video">
-                            <img 
-                                src="https://origin-staticv2.sonyliv.com/videoasset_images/royal_rumble_2nd_feb_landscape_thumb.jpg" 
-                                alt="WWE Royal Rumble - 2 Feb 2025" 
-                                class="w-full h-full object-cover"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <!-- Content -->
-                        <div class="p-4 space-y-3">
-                            <!-- Badges -->
-                            <div class="flex flex-wrap gap-2">
-                                                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    WWE                                </span>
-                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    ENG                                </span>
-                            </div>
-
-                            <!-- Details -->
-                            <div class="space-y-2">
-                                <h2 class="text-xl font-bold text-gray-100 truncate">
-                                    WWE Royal Rumble - 2 Feb 2025                                </h2>
-                                <p class="text-sm text-gray-400 line-clamp-2">
-                                    Upcoming Match                                </p>
-                                <div class="flex items-center text-sm text-gray-400 space-x-2">
-                                    <i class="fas fa-tv"></i>   
-                                    <span>Sony Sports Ten 5</span>
-                                </div>
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="pt-4">
-                                                                    <div class="relative group">
-                                        <button 
-                                            class="w-full flex items-center justify-center space-x-2 bg-gray-700/50 text-gray-400 px-6 py-3 rounded-lg font-medium cursor-not-allowed overflow-hidden"
-                                            disabled
-                                        >
-                                            <i class="far fa-clock"></i>
-                                            <span>Event Not Started</span>
-                                        </button>
-                                        <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"></div>
-                                    </div>
-                                                            </div>
-                        </div>
-                    </article>
-                                    <article class="match-card rounded-xl overflow-hidden relative transform transition-all ">
-                        <!-- Image -->
-                        <div class="relative aspect-video">
-                            <img 
-                                src="https://origin-staticv2.sonyliv.com/videoasset_images/asiacup_promo_23jan25_landcape_thumb.jpg" 
-                                alt="Asia Cup 2025" 
-                                class="w-full h-full object-cover"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <!-- Content -->
-                        <div class="p-4 space-y-3">
-                            <!-- Badges -->
-                            <div class="flex flex-wrap gap-2">
-                                                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    Cricket                                </span>
-                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    HIN                                </span>
-                            </div>
-
-                            <!-- Details -->
-                            <div class="space-y-2">
-                                <h2 class="text-xl font-bold text-gray-100 truncate">
-                                    Asia Cup 2025                                </h2>
-                                <p class="text-sm text-gray-400 line-clamp-2">
-                                    Upcoming Match                                </p>
-                                <div class="flex items-center text-sm text-gray-400 space-x-2">
-                                    <i class="fas fa-tv"></i>   
-                                    <span>Sony Sports Ten 1</span>
-                                </div>
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="pt-4">
-                                                                    <div class="relative group">
-                                        <button 
-                                            class="w-full flex items-center justify-center space-x-2 bg-gray-700/50 text-gray-400 px-6 py-3 rounded-lg font-medium cursor-not-allowed overflow-hidden"
-                                            disabled
-                                        >
-                                            <i class="far fa-clock"></i>
-                                            <span>Event Not Started</span>
-                                        </button>
-                                        <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"></div>
-                                    </div>
-                                                            </div>
-                        </div>
-                    </article>
-                                    <article class="match-card rounded-xl overflow-hidden relative transform transition-all ">
-                        <!-- Image -->
-                        <div class="relative aspect-video">
-                            <img 
-                                src="https://origin-staticv2.sonyliv.com/videoasset_images/stuttgart_vs_psg_30th_jan.png" 
-                                alt="Stuttgart vs PSG - UEFA Champions League 2024-25" 
-                                class="w-full h-full object-cover"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <!-- Content -->
-                        <div class="p-4 space-y-3">
-                            <!-- Badges -->
-                            <div class="flex flex-wrap gap-2">
-                                                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    Football                                </span>
-                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    ENG                                </span>
-                            </div>
-
-                            <!-- Details -->
-                            <div class="space-y-2">
-                                <h2 class="text-xl font-bold text-gray-100 truncate">
-                                    Stuttgart vs PSG - UEFA Champions League 2024-25                                </h2>
-                                <p class="text-sm text-gray-400 line-clamp-2">
-                                    Upcoming Match                                </p>
-                                <div class="flex items-center text-sm text-gray-400 space-x-2">
-                                    <i class="fas fa-tv"></i>   
-                                    <span>Sony Sports Ten 5</span>
-                                </div>
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="pt-4">
-                                                                    <div class="relative group">
-                                        <button 
-                                            class="w-full flex items-center justify-center space-x-2 bg-gray-700/50 text-gray-400 px-6 py-3 rounded-lg font-medium cursor-not-allowed overflow-hidden"
-                                            disabled
-                                        >
-                                            <i class="far fa-clock"></i>
-                                            <span>Event Not Started</span>
-                                        </button>
-                                        <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"></div>
-                                    </div>
-                                                            </div>
-                        </div>
-                    </article>
-                                    <article class="match-card rounded-xl overflow-hidden relative transform transition-all ">
-                        <!-- Image -->
-                        <div class="relative aspect-video">
-                            <img 
-                                src="https://origin-staticv2.sonyliv.com/videoasset_images/inter_vs_monaco_30th_jan.png" 
-                                alt="Inter vs Monaco - UEFA Champions League 2024-25" 
-                                class="w-full h-full object-cover"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <!-- Content -->
-                        <div class="p-4 space-y-3">
-                            <!-- Badges -->
-                            <div class="flex flex-wrap gap-2">
-                                                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    Football                                </span>
-                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    ENG                                </span>
-                            </div>
-
-                            <!-- Details -->
-                            <div class="space-y-2">
-                                <h2 class="text-xl font-bold text-gray-100 truncate">
-                                    Inter vs Monaco - UEFA Champions League 2024-25                                </h2>
-                                <p class="text-sm text-gray-400 line-clamp-2">
-                                    Upcoming Match                                </p>
-                                <div class="flex items-center text-sm text-gray-400 space-x-2">
-                                    <i class="fas fa-tv"></i>   
-                                    <span>Sony Sports Ten 5</span>
-                                </div>
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="pt-4">
-                                                                    <div class="relative group">
-                                        <button 
-                                            class="w-full flex items-center justify-center space-x-2 bg-gray-700/50 text-gray-400 px-6 py-3 rounded-lg font-medium cursor-not-allowed overflow-hidden"
-                                            disabled
-                                        >
-                                            <i class="far fa-clock"></i>
-                                            <span>Event Not Started</span>
-                                        </button>
-                                        <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"></div>
-                                    </div>
-                                                            </div>
-                        </div>
-                    </article>
-                                    <article class="match-card rounded-xl overflow-hidden relative transform transition-all ">
-                        <!-- Image -->
-                        <div class="relative aspect-video">
-                            <img 
-                                src="https://origin-staticv2.sonyliv.com/videoasset_images/juventus_vs_benfica_30th_jan.png" 
-                                alt="Juventus vs Benfica - UEFA Champions League 2024-25" 
-                                class="w-full h-full object-cover"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <!-- Content -->
-                        <div class="p-4 space-y-3">
-                            <!-- Badges -->
-                            <div class="flex flex-wrap gap-2">
-                                                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    Football                                </span>
-                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    ENG                                </span>
-                            </div>
-
-                            <!-- Details -->
-                            <div class="space-y-2">
-                                <h2 class="text-xl font-bold text-gray-100 truncate">
-                                    Juventus vs Benfica - UEFA Champions League 2024-25                                </h2>
-                                <p class="text-sm text-gray-400 line-clamp-2">
-                                    Upcoming Match                                </p>
-                                <div class="flex items-center text-sm text-gray-400 space-x-2">
-                                    <i class="fas fa-tv"></i>   
-                                    <span>Sony Sports Ten 5</span>
-                                </div>
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="pt-4">
-                                                                    <div class="relative group">
-                                        <button 
-                                            class="w-full flex items-center justify-center space-x-2 bg-gray-700/50 text-gray-400 px-6 py-3 rounded-lg font-medium cursor-not-allowed overflow-hidden"
-                                            disabled
-                                        >
-                                            <i class="far fa-clock"></i>
-                                            <span>Event Not Started</span>
-                                        </button>
-                                        <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"></div>
-                                    </div>
-                                                            </div>
-                        </div>
-                    </article>
-                                    <article class="match-card rounded-xl overflow-hidden relative transform transition-all ">
-                        <!-- Image -->
-                        <div class="relative aspect-video">
-                            <img 
-                                src="https://origin-staticv2.sonyliv.com/videoasset_images/aston_villa_vs_celtic_30th_jan.png" 
-                                alt="Aston Villa vs Celtic - UEFA Champions League 2024-25" 
-                                class="w-full h-full object-cover"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <!-- Content -->
-                        <div class="p-4 space-y-3">
-                            <!-- Badges -->
-                            <div class="flex flex-wrap gap-2">
-                                                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    Football                                </span>
-                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    ENG                                </span>
-                            </div>
-
-                            <!-- Details -->
-                            <div class="space-y-2">
-                                <h2 class="text-xl font-bold text-gray-100 truncate">
-                                    Aston Villa vs Celtic - UEFA Champions League 2024-25                                </h2>
-                                <p class="text-sm text-gray-400 line-clamp-2">
-                                    Upcoming Match                                </p>
-                                <div class="flex items-center text-sm text-gray-400 space-x-2">
-                                    <i class="fas fa-tv"></i>   
-                                    <span>Sony Sports Ten 5</span>
-                                </div>
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="pt-4">
-                                                                    <div class="relative group">
-                                        <button 
-                                            class="w-full flex items-center justify-center space-x-2 bg-gray-700/50 text-gray-400 px-6 py-3 rounded-lg font-medium cursor-not-allowed overflow-hidden"
-                                            disabled
-                                        >
-                                            <i class="far fa-clock"></i>
-                                            <span>Event Not Started</span>
-                                        </button>
-                                        <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"></div>
-                                    </div>
-                                                            </div>
-                        </div>
-                    </article>
-                                    <article class="match-card rounded-xl overflow-hidden relative transform transition-all ">
-                        <!-- Image -->
-                        <div class="relative aspect-video">
-                            <img 
-                                src="https://origin-staticv2.sonyliv.com/videoasset_images/hockey_india_league_2024_promp_landscape_thumb.jpg" 
-                                alt="Hockey India League 2024-25" 
-                                class="w-full h-full object-cover"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <!-- Content -->
-                        <div class="p-4 space-y-3">
-                            <!-- Badges -->
-                            <div class="flex flex-wrap gap-2">
-                                                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    Hockey                                </span>
-                                <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
-                                    ENG                                </span>
-                            </div>
-
-                            <!-- Details -->
-                            <div class="space-y-2">
-                                <h2 class="text-xl font-bold text-gray-100 truncate">
-                                    Hockey India League 2024-25                                </h2>
-                                <p class="text-sm text-gray-400 line-clamp-2">
-                                    Upcoming Match                                </p>
-                                <div class="flex items-center text-sm text-gray-400 space-x-2">
-                                    <i class="fas fa-tv"></i>   
-                                    <span>Sony Sports Ten 1</span>
-                                </div>
-                            </div>
-
-                            <!-- Action Button -->
-                            <div class="pt-4">
-                                                                    <div class="relative group">
-                                        <button 
-                                            class="w-full flex items-center justify-center space-x-2 bg-gray-700/50 text-gray-400 px-6 py-3 rounded-lg font-medium cursor-not-allowed overflow-hidden"
-                                            disabled
-                                        >
-                                            <i class="far fa-clock"></i>
-                                            <span>Event Not Started</span>
-                                        </button>
-                                        <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"></div>
-                                    </div>
-                                                            </div>
-                        </div>
-                    </article>
-                            </div>
-            </main>
-
-    <!-- Back to Top -->
-    <button 
-        id="backToTop"
-        class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600/80 hover:bg-blue-700 text-white rounded-full shadow-lg backdrop-blur-sm transition-all opacity-0 invisible"
-        aria-label="Back to top"
-    >
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script>
-        // Back to Top Button
-        const backToTop = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.remove('opacity-0', 'invisible');
-                backToTop.classList.add('opacity-100', 'visible');
-            } else {
-                backToTop.classList.remove('opacity-100', 'visible');
-                backToTop.classList.add('opacity-0', 'invisible');
-            }
-        });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Card Hover Effects
-        document.querySelectorAll('.match-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-            });
-        });
-    </script>
+<body>
+  <div id="player"></div>
+  <a id="telegram-button" href="https://t.me/+33IHK7BHR14xY2I1" target="_blank">JOIN my Telegram</a>
 </body>
 </html>
