@@ -1,117 +1,139 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Willow HD</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="referrer" content="no-referrer">
-  <link rel="shortcut icon" href="https://live.drmlive.in/sports/willow.jpg">
-  <style type="text/css">
-      body, html {
-          margin: 0;
-          padding: 0;
-          width: 100%;
-          height: 100%;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          background-color: black;
-      }
-      #player {
-          width: 100vw;
-          height: 80vh;
-          max-width: 100%;
-          max-height: 100%;
-          object-fit: contain;
-      }
-      #telegram-button {
-          margin-top: 20px;
-          padding: 10px 20px;
-          background-color: #007bff;
-          color: white;
-          font-size: 18px;
-          text-decoration: none;
-          border-radius: 5px;
-      }
-      #telegram-button:hover {
-          background-color: #0056b3;
-      }
-  </style>
-  <script src="https://ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
-  <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
-
-          const m3u8Url = "https://p-cdn4-a-cg14-linear-cbd46b77.movetv.com/clipslist/22/20250216T091024Z/20250216T111024Z/master_7_3_widevine.m3u8";
-          const id = "willow";
-          const encryptedToken = "aDJnb1pCNGtIeGx0elBzUmhpaFNqeDYrc0pyVXJUdlp4WVpwZTladW01azVVNCtENG96bHNiSDVzVkFMVllBYw==";
-          
-          async function fetchClearKey(pssh) {
-              try {
-                  const response = await fetch("key.php", {
-                      method: "POST",
-                      headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({ pssh: pssh, id: id, token: encryptedToken })
-                  });
-
-                  if (!response.ok) return null;
-                  return await response.json();
-              } catch (error) {
-                  return null;
-              }
-          }
-
-          async function initializePlayer() {
-              try {
-                  const pssh = await fetchPSSHFromM3U8(m3u8Url);
-                  const keys = await fetchClearKey(pssh);
-
-                  jwplayer("player").setup({
-                      playlist: [{
-                          sources: [{
-                              default: true,
-                              type: "dash",
-                              file: m3u8Url,
-                              drm: {
-                                  clearkey: { keyId: keys.keyId, key: keys.key }
-                              },
-                              label: "HD"
-                          }]
-                      }],
-                      width: "100%",
-                      height: "100%",
-                      aspectratio: "16:9",
-                      autostart: true
-                  });
-              } catch (error) {}
-          }
-
-          async function fetchPSSHFromM3U8(m3u8Url) {
-              try {
-                  const response = await fetch(m3u8Url);
-                  if (!response.ok) return null;
-                  
-                  const m3u8Text = await response.text();
-                  const sessionKeyTag = m3u8Text.split("\n").find(line => 
-                      line.startsWith("#EXT-X-SESSION-KEY") && 
-                      line.includes('KEYFORMAT="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed"')
-                  );
-
-                  if (!sessionKeyTag) return null;
-                  const uriMatch = sessionKeyTag.match(/URI="data:text\/plain;base64,([^"]+)"/);
-                  return uriMatch ? uriMatch[1] : null;
-              } catch (error) {
-                  return null;
-              }
-          }
-
-          initializePlayer();
-      });
-  </script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEAMROHIT45OFFICAL Streaming</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.compiled.min.js"></script>
+<style>
+  body {
+      background-color: black;
+      color: white;
+      text-align: center;
+  }
+  #videoContainer {
+      width: 80%;
+      margin: auto;
+  }
+  video {
+      width: 100%;
+      max-height: 80vh;
+  }
+  #telegramButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 378px;
+      height: 50px;
+      background: linear-gradient(90deg, darkblue, #001f3f);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 20px auto;
+      font-size: 18px;
+      font-weight: bold;
+  }
+  #qualitySelect {
+      margin-top: 10px;
+      padding: 8px;
+      font-size: 16px;
+      background-color: #001f3f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+  }
+</style>
 </head>
 <body>
-  <div id="player"></div>
-  <a id="telegram-button" href="https://t.me/+33IHK7BHR14xY2I1" target="_blank">JOIN my Telegram</a>
+
+<h1>TEAMROHIT45OFFICAL Streaming</h1>
+
+<div id="videoContainer">
+  <video id="video" controls autoplay></video>
+  <select id="qualitySelect" onchange="changeQuality(this.value)">
+    <option value="auto">Auto Quality</option>
+  </select>
+</div>
+
+<script>
+  async function initShakaPlayer() {
+      if (!shaka.Player.isBrowserSupported()) {
+          console.error("Error: Your browser does not support Shaka Player.");
+          return;
+      }
+
+      const video = document.getElementById("video");
+      const player = new shaka.Player(video);
+
+      // Configure DRM (ClearKey)
+      player.configure({
+          drm: {
+              clearKeys: {
+                  "ae26845bd33038a9c0774a0981007294": "63ac662dde310cfb4cc6f9b43b34196d"
+              }
+          },
+          streaming: {
+              bufferingGoal: 10, // Reduce initial buffering time
+              rebufferingGoal: 5, // Minimize rebuffering
+              abr: { enabled: true } // Enable adaptive bitrate streaming
+          }
+      });
+
+      try {
+          await player.load("https://p-cdn4-a-cg14-linear-cbd46b77.movetv.com/clipslist/22/20250216T091024Z/20250216T111024Z/master_7_3_widevine.m3u8");
+          console.log("Video loaded successfully!");
+
+          // Populate quality selection dropdown
+          updateQualityOptions(player);
+      } catch (error) {
+          console.error("Error loading video:", error);
+      }
+  }
+
+  function updateQualityOptions(player) {
+      const tracks = player.getVariantTracks();
+      const qualitySelect = document.getElementById("qualitySelect");
+      qualitySelect.innerHTML = <option value="auto">Auto Quality</option>;
+
+      tracks.forEach((track) => {
+          let label = ${track.height}p (${track.bandwidth} bps);
+          let option = document.createElement("option");
+          option.value = track.id;
+          option.textContent = label;
+          qualitySelect.appendChild(option);
+      });
+  }
+
+  function changeQuality(trackId) {
+      const player = shaka.Player.getInstance();
+      if (!player) return;
+
+      if (trackId === "auto") {
+          player.configure({ abr: { enabled: true } }); // Enable Auto
+      } else {
+          player.configure({ abr: { enabled: false } }); // Disable Auto
+          player.selectVariantTrack(player.getVariantTracks().find(track => track.id == trackId), true);
+      }
+  }
+
+  document.addEventListener("DOMContentLoaded", initShakaPlayer);
+</script>
+
+<script>
+  if (confirm("Join Our Telegram Channel?")) { 
+      window.location.href = "https://t.me/+3aJFsq2EJLg4NzI1"; 
+  }
+</script>
+
+<div id="telegramButton" onclick="redirectToTelegram()">
+  Join Telegram
+</div>
+
+<script>
+  function redirectToTelegram() {
+      window.location.href = "https://t.me/+3aJFsq2EJLg4NzI1";
+  }
+</script>
+
 </body>
 </html>
